@@ -15,7 +15,7 @@ function addNewEmployee(evtArgs){
     //updates the state ie employees array, but only if all input fields have info
     //grab all input
     let fName =$('#input-firstName').val();
-    
+
     // test all input
     if(fName ===''){
         //do nothing, could maybe add an alert here, but alerts are disruptive
@@ -36,9 +36,11 @@ function addNewEmployee(evtArgs){
 
 }
 function render(){
+    //clear table first
+    clearTable();
     //render the employees array to the DOM. clear screen and re render all objects everytime a new employee is added
     for(let employee of employees){
-        $('#table-Employees').append(`
+        $('#table-body').append(`
             <tr>
                 <td>${employee.firstName}</td>
             </tr>
@@ -48,4 +50,7 @@ function render(){
 function clearInputs(){
     //clear input after submit button has been clicked and a employee has been added to global employees array
     $('#input-firstName').val('');
+}
+function clearTable(){
+    $('#table-body').empty();
 }
