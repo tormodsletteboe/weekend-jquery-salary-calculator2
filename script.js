@@ -1,13 +1,40 @@
-console.log('in script');
+//console.log('in script');
 
 let employees =[];
 
 $(document).ready(readyNow); //starting point of script
 
 function readyNow(){
-    console.log('in readyNow');
+    //console.log('in readyNow');
     //register event handlers here
     $('#input-Form').on('submit',addNewEmployee);
+    $('#table-body').on('click','.deleteBtn',onDeleteBtn);
+}
+function onDeleteBtn(){
+    //console.log('in deleteBtn');
+    //find which dom tr was deleted, and find id of that tr
+    let uniqID = $(this).parent().parent()[0].id;
+    //console.log(uniqID);
+    removeEmployee(uniqID);
+    render();
+}
+function removeEmployee(uid){
+   //console.log('in removeEmployee');
+    let employeeIndexToRemove=-1;
+    for(let i =0; i<employees.length; i++){
+        //console.log('in for loop find employee to remove')
+        if(employees[i].UniqueID==uid){
+            //console.log('found employee')
+            employeeIndexToRemove=i;
+        }
+    }
+    if(employeeIndexToRemove!=-1){ // ie found one 
+        //console.log('in splice');
+        employees.splice(employeeIndexToRemove,1);
+    }
+    
+
+
 }
 function addNewEmployee(evtArgs){
     //console.log('in addNewEmployee');
@@ -33,7 +60,8 @@ function addNewEmployee(evtArgs){
         lastName: l_Name,
         ID: id,
         jobTitle:title,
-        annualSalary: annualSal
+        annualSalary: annualSal,
+        UniqueID: Math.random()
     };
     //add new employee obj to employees array, ie state
     employees.push(newEmployee);
@@ -50,12 +78,15 @@ function render(){
     //render the employees array to the DOM. clear screen and re render all objects everytime a new employee is added
     for(let employee of employees){
         $('#table-body').append(`
-            <tr>
+            <tr id='${employee.UniqueID}'>
                 <td>${employee.firstName}</td>
                 <td>${employee.lastName}</td>
                 <td>${employee.ID}</td>
                 <td>${employee.jobTitle}</td>
                 <td>${employee.annualSalary}</td>
+                <td>
+                    <button class ='deleteBtn'>Delete</button>
+                </td>
             </tr>
         `);
     }

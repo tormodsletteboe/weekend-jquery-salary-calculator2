@@ -10,6 +10,12 @@
     
     
 }
+#label-TotalMonthly{
+    text-align: right;
+    display: flex;
+    flex-direction: row-reverse;
+    padding: 20px;
+}
 #table-row-header{
     background-color: gray;
 }
@@ -25,4 +31,5 @@ h1{
 }
 body{
     margin: 0;
+
 }
