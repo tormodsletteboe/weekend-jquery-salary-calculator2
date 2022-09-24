@@ -2,13 +2,16 @@ console.log('in script');
 
 let employees =[];
 
-$(document).ready(readyNow);
+$(document).ready(readyNow); //starting point of script
+
 function readyNow(){
     console.log('in readyNow');
     //register event handlers here
+    
 }
 function addNewEmployee(evtArgs){
     evtArgs.preventDefault();
+    //updates the state ie employees array
 
 }
 function render(){

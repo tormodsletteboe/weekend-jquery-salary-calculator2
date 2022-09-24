@@ -10,6 +10,9 @@
     
     
 }
+#table-row-header{
+    background-color: gray;
+}
 #addEmployee{
     font-size:x-large;
     /* padding: 0px 10px 10px 10px; */
