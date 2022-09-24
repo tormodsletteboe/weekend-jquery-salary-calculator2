@@ -1,6 +1,7 @@
 //console.log('in script');
 
 let employees =[];
+let totalMontly=-1;
 
 $(document).ready(readyNow); //starting point of script
 
@@ -16,6 +17,7 @@ function onDeleteBtn(){
     let uniqID = $(this).parent().parent()[0].id;
     //console.log(uniqID);
     removeEmployee(uniqID);
+    updateTotalMonthlyCost();
     render();
 }
 function removeEmployee(uid){
@@ -65,12 +67,20 @@ function addNewEmployee(evtArgs){
     };
     //add new employee obj to employees array, ie state
     employees.push(newEmployee);
+    updateTotalMonthlyCost();
     //since employee was added succesfully, clear all inputs
     clearInputs();
     //render the state
     render();
 
 
+}
+function updateTotalMonthlyCost(){
+    let totalAnnualCost=0;
+    for(let i =0; i<employees.length;i++){
+        totalAnnualCost+=Number(employees[i].annualSalary);
+    }
+    totalMontly=totalAnnualCost/12;
 }
 function render(){
     //clear table first
@@ -90,6 +100,7 @@ function render(){
             </tr>
         `);
     }
+    $('#label-TotalMonthly').text(`Total Monthly: $${totalMontly.toFixed(2)}`);
 }
 function clearInputs(){
     //clear input after submit button has been clicked and a employee has been added to global employees array

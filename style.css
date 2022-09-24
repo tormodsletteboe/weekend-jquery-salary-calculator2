@@ -10,11 +10,20 @@
     
     
 }
+#input-Form{
+    padding: 50px 50px 50px 10px;
+}
+.testClass{
+    padding: 10px 50px 50px 50px;
+}
+#table-Employees{
+    padding: 10px 50px 50px 50px;
+}
 #label-TotalMonthly{
     text-align: right;
     display: flex;
     flex-direction: row-reverse;
-    padding: 20px;
+    padding: 90px;
 }
 #table-row-header{
     background-color: gray;
@@ -22,7 +31,7 @@
 #addEmployee{
     font-size:x-large;
     /* padding: 0px 10px 10px 10px; */
-    margin:  0px 10px 10px 10px;
+    margin:  0px 10px 10px 30px;
 
     
 }
