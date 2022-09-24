@@ -17,10 +17,11 @@ function addNewEmployee(evtArgs){
     let f_Name = $('#input-firstName').val();
     let l_Name = $('#input-lastName').val();
     let id = $('#input-ID').val();
+    let title = $('#input-JobTitle').val();
     
 
     // test all input
-    if(f_Name ==='' || l_Name==='' || id===''){
+    if(f_Name ==='' || l_Name==='' || id===''||title===''){
         //do nothing, could maybe add an alert here, but alerts are disruptive
         //need to inform user in someway that something is wrong
         return;
@@ -29,7 +30,8 @@ function addNewEmployee(evtArgs){
     let newEmployee = {
         firstName: f_Name,
         lastName: l_Name,
-        ID: id
+        ID: id,
+        jobTitle:title
     };
     //add new employee obj to employees array, ie state
     employees.push(newEmployee);
@@ -50,6 +52,7 @@ function render(){
                 <td>${employee.firstName}</td>
                 <td>${employee.lastName}</td>
                 <td>${employee.ID}</td>
+                <td>${employee.jobTitle}</td>
             </tr>
         `);
     }
@@ -59,6 +62,7 @@ function clearInputs(){
     $('#input-firstName').val('');
     $('#input-lastName').val('');
     $('#input-ID').val('');
+    $('#input-JobTitle').val('');
 }
 function clearTable(){
     $('#table-body').empty();
