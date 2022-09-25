@@ -26,10 +26,10 @@
     padding: 10px 50px 50px 50px;
 }
 #label-TotalMonthly{
-    text-align: right;
+    text-align: left;
     display: flex;
-    flex-direction: row-reverse;
-    padding: 10px;
+    flex-direction: row;
+    padding: 10px 10px 10px 10px;
 }
 #table-row-header{
     background-color: gray;

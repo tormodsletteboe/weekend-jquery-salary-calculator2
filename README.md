@@ -1,28 +1,27 @@
-(View Raw will give you the markdown that you can copy to your repos!)
 
 
-![MIT LICENSE](https://img.shields.io/github/license/scottbromander/the_marketplace.svg?style=flat-square)
+
 ![REPO SIZE](https://img.shields.io/github/repo-size/scottbromander/the_marketplace.svg?style=flat-square)
 ![TOP_LANGUAGE](https://img.shields.io/github/languages/top/scottbromander/the_marketplace.svg?style=flat-square)
 ![FORKS](https://img.shields.io/github/forks/scottbromander/the_marketplace.svg?style=social)
 
-# PROJECT NAME
+# Salary Calculator
 
 ## Description
 
-_Duration: 2 Week Sprint_
+_Duration: 2 Day Sprint_
+Your project description goes here. What problem did you solve? How did you solve it? 
 
-Directly above this is how long it took you to develop the project. Your project description goes here. What problem did you solve? How did you solve it? 
 
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed aliquam at massa in faucibus. Etiam volutpat, risus non mollis convallis, velit nisi pulvinar mi, eu faucibus orci nisi eget nibh. Integer a velit pretium, volutpat arcu eleifend, fringilla elit. Cras erat sapien, convallis venenatis tellus vitae, feugiat dictum felis.
-
-Suspendisse euismod volutpat aliquet. Maecenas vulputate mauris in pellentesque facilisis. Phasellus varius malesuada semper. Cras sollicitudin diam mollis maximus aliquam.
 
 To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
 
 ## Screen Shot
 
-Include one or two screen shots of your project here (optional). Remove if unused.
+![Screenshot](withInput.png)
+User simply fills in "all" Add Employee inputs and click the submit button. The Employee will then be added to a table and a total montly cost will be calculated. The user can add as many employees to the table as they desire. Additionally the user can remove an employee by clicking the corresponding employee delete button.
+If the total monthly cost exceeds $20,000 USD the label background color will change to red. If the user then removes an employee and the monthly cost drops below $20,000 USD, the background changes back to white. See image below.
+![Screenshot](withInputOver20k.png)
 
 ### Prerequisites
 
@@ -45,14 +44,16 @@ If your application has secret keys (for example --  Twilio), make sure you tell
 6. The `npm run client` command will open up a new browser tab for you!
 
 ## Usage
-How does someone use this application? Tell a user story here.
 
-1. xxx
-2. xxx
-3. xxx
-4. xxx
-5. xxx
-6. xxx
+
+1. Type in first name, last name, ID, title and annual salary.
+2. Click the submit button.
+3. An Employee will then be added to the table and a Total Monthly Cost will be calculated.
+4. User can add more employees to the table by filling in the inputs and clicking submit again.
+5. A new employee will then be added to the table and a Total Monthly Cost will be calculated.
+6. If Total Monthly Cost exceeds $20,000 USD, that labels background color will change to red.
+7. To get the Total Monthly Cost below $20,000 USD, an employee or multiple employees have to be deleted from the table.
+8. Simply click the delete button of the employee to remove. That employee will be removed from the table and a new Total Monthly Cost will be calculated. If the new Total Monthly Cost drops below $20,000 USD the background color will change back to white.
 
 
 ## Built With
