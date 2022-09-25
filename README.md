@@ -10,11 +10,9 @@
 ## Description
 
 _Duration: 2 Day Sprint_
-Your project description goes here. What problem did you solve? How did you solve it? 
 
+Salary Calculator helps the user manage the total monthly salary cost. Simply input all employees and their corresponding data required by the program and click submit. A total montly cost will be calculated after every new employee added. Should an employee quit simply delete them from the table and the new monthly cost will be calculated.
 
-
-To see the fully functional site, please visit: [DEPLOYED VERSION OF APP](www.heroku.com)
 
 ## Screen Shot
 
@@ -27,8 +25,12 @@ If the total monthly cost exceeds $20,000 USD the label background color will ch
 
 Link to software that is required to install the app (e.g. node).
 
-- [Node.js](https://nodejs.org/en/)
-- List other prerequisites here
+- [javascript](https://www.javascript.com/)
+- [css]
+- [html]
+- [jquery]
+- [git](https://git-scm.com/)
+- [github](https://github.com/)
 
 ## Installation
 
@@ -58,24 +60,12 @@ If your application has secret keys (for example --  Twilio), make sure you tell
 
 ## Built With
 
-List technologies and frameworks here
+javascript, css, html, jquery, git and github.com
 
-## License
-[MIT](https://choosealicense.com/licenses/mit/)
-
-_Note, include this only if you have a license file. GitHub will generate one for you if you want!_
 
 ## Acknowledgement
-Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Thank your people)
+Thanks to [Prime Digital Academy](www.primeacademy.io) who equipped and helped me to make this application a reality. (Edan Schwartz, Liz Kerber, Daniel Legan, Tia Theisen and Alina Trukhina)
 
 ## Support
-If you have suggestions or issues, please email me at [youremail@whatever.com](www.google.com)
-<!-- # Project Name
+If you have suggestions or issues, please email me at [tormod.slettebo@gmail.com]
 
-[Project Instructions](./INSTRUCTIONS.md), this line may be removed once you have updated the README.md
-
-## Description
-
-Your project description goes here. What problem did you solve? How did you solve it?
-
-Additional README details can be found [here](https://github.com/PrimeAcademy/readme-template/blob/master/README.md). -->
