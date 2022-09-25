@@ -1,16 +1,24 @@
 //console.log('in script');
 
-let employees =[];
-let     totalMontly=-1;
+let employees =[]; //  array of all employees
+let totalMontly=-1;// total monthly cost variable
 
 $(document).ready(readyNow); //starting point of script
 
+//readyNow
+// used to register event handlers
 function readyNow(){
     //console.log('in readyNow');
     //register event handlers here
     $('#input-Form').on('submit',addNewEmployee);
     $('#table-body').on('click','.deleteBtn',onDeleteBtn);
 }
+
+//onDeleteBtn
+//used to delete the employee from the employees array. It updates the new cost and re renders the table.
+// to find the employee that belongs to the row in which the delete button was clicked, it finds the .id attribute give to the <tr>
+//element when an employee is rendered to the dom. see render() function. This .id is the same id stored in the employee.uniqueID,
+//there allowing to find the exact employee
 function onDeleteBtn(){
     //console.log('in deleteBtn');
     //find which dom tr was deleted, and find id of that tr
@@ -20,6 +28,9 @@ function onDeleteBtn(){
     updateTotalMonthlyCost();
     render();
 }
+
+//removeEmployee
+//run through the employees array and find the employee with id of 'uid', if found remove that employee from the state
 function removeEmployee(uid){
    //console.log('in removeEmployee');
     let employeeIndexToRemove=-1;
@@ -38,6 +49,11 @@ function removeEmployee(uid){
 
 
 }
+
+//addNewEmployee
+//grab the input from the DOM and creates a new employee obj, which gets pushed to employees array
+// also updates monthly cost and clears all inputs, and calls render.
+//the 'test all input area is redundant as a required attribute has been added to the corresponding html input elements
 function addNewEmployee(evtArgs){
     //console.log('in addNewEmployee');
     evtArgs.preventDefault();
@@ -75,6 +91,9 @@ function addNewEmployee(evtArgs){
 
 
 }
+
+//updateTotalMonthlyCost
+//updates the global totalMontly variable
 function updateTotalMonthlyCost(){
     let totalAnnualCost=0;
     for(let i =0; i<employees.length;i++){
@@ -83,6 +102,10 @@ function updateTotalMonthlyCost(){
     totalMontly=totalAnnualCost/12;
     
 }
+
+//render
+//renders the employees array to the dom. everytime a new employee is added the function clears the table-body and re populates it with
+//whats in the employees array. it also changes the background color of total monthly label based on if its higher or lower than 20k
 function render(){
     //clear table first
     clearTable();
@@ -113,6 +136,9 @@ function render(){
     }
     
 }
+
+//clearInputs
+//clears all input elements
 function clearInputs(){
     //clear input after submit button has been clicked and a employee has been added to global employees array
     $('#input-firstName').val('');
@@ -121,6 +147,9 @@ function clearInputs(){
     $('#input-JobTitle').val('');
     $('#input-AnnualSal').val('');
 }
+
+//clearTable
+//clears only the table-body, not the table row headers or the table it self.
 function clearTable(){
     $('#table-body').empty();
 }
