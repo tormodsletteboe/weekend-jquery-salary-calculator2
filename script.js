@@ -1,7 +1,7 @@
 //console.log('in script');
 
 let employees =[];
-let totalMontly=-1;
+let     totalMontly=-1;
 
 $(document).ready(readyNow); //starting point of script
 
