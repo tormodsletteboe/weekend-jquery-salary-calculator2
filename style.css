@@ -10,6 +10,12 @@
     
     
 }
+.makered{
+    background-color: red;
+}
+.makewhite{
+    background-color: white;
+}
 #input-Form{
     padding: 50px 50px 50px 10px;
 }
@@ -23,7 +29,7 @@
     text-align: right;
     display: flex;
     flex-direction: row-reverse;
-    padding: 90px;
+    padding: 10px;
 }
 #table-row-header{
     background-color: gray;

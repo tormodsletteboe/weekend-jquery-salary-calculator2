@@ -81,6 +81,7 @@ function updateTotalMonthlyCost(){
         totalAnnualCost+=Number(employees[i].annualSalary);
     }
     totalMontly=totalAnnualCost/12;
+    
 }
 function render(){
     //clear table first
@@ -101,6 +102,16 @@ function render(){
         `);
     }
     $('#label-TotalMonthly').text(`Total Monthly: $${totalMontly.toFixed(2)}`);
+    if(totalMontly>20000){
+        $('#label-TotalMonthly').removeClass('makewhite');
+        $('#label-TotalMonthly').addClass('makered');
+    }
+    else
+    {
+        $('#label-TotalMonthly').removeClass('makered');
+        $('#label-TotalMonthly').addClass('makewhite');
+    }
+    
 }
 function clearInputs(){
     //clear input after submit button has been clicked and a employee has been added to global employees array
