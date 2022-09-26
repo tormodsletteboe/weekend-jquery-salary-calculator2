@@ -26,10 +26,14 @@
     padding: 10px 50px 50px 50px;
 }
 #label-TotalMonthly{
-    text-align: left;
+    /* text-align: left;
     display: flex;
     flex-direction: row;
-    padding: 10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px; */
+    display: inline-block;
+    border-radius: 5px;
+    margin-left: 253px;
+    border: 8px solid yellow;
 }
 #table-row-header{
     background-color: gray;

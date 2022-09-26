@@ -4,7 +4,6 @@ let employees =[]; //  array of all employees
 let totalMontly=-1;// total monthly cost variable
 
 $(document).ready(readyNow); //starting point of script
-
 //readyNow
 // used to register event handlers
 function readyNow(){
